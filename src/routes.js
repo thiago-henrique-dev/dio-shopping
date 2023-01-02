@@ -15,3 +15,5 @@ const MainRoutes = () => {
         </Route>
     )
 }
+
+export default MainRoutes
