@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Paper, Grid, Typography, Button, List, ListItem, ListItemText, makeStyles } from '@material-ui/core/';
-
+import Item from '../components/Item'
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
@@ -25,24 +25,18 @@ const HomePage = () => {
                 Categorias
               </Typography>
               <List>
-                <ListItem>
-                  <ListItemText
-                    primary="Times nacionais"
-                    secondary="3"
-                  />
-                </ListItem>
-                <ListItem>
-                  <ListItemText
-                    primary="Times internacionais"
-                    secondary="3"
-                  />
-                </ListItem>
-                <ListItem>
-                  <ListItemText
-                    primary="Times históricos"
-                    secondary="3"
-                  />
-                </ListItem>
+                <Item 
+                    itemName="Times Nacionais"
+                    itemDetails="3"
+                />
+                <Item
+                  itemName="Times Internacionais"
+                  itemDetails="3"
+                />
+                <Item
+                  itemName="Times Municipais"
+                  itemDetails="3"
+                />
               </List>
             </Paper>
           </Grid>
