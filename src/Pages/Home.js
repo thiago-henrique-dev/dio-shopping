@@ -1,6 +1,20 @@
 import React from 'react';
+import { Container, Paper, Grid, Typography, Button, List, ListItem, ListItemText, makeStyles } from '@material-ui/core/';
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+      flexGrow: 1,
+      marginTop: '5px',
+    },
+    paper: {
+      padding: theme.spacing(2),
+      textAlign: 'center'
+    },
+  }));
 
 const HomePage = () => {
+    const classes = useStyles();
+
     return (
         <Container maxWidth="xl">
       
@@ -99,13 +113,7 @@ const HomePage = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid container direction="row" xs={12}>
-          <TextField id="name" label="Name" fullWidth/>
-          <TextField id="message" label="Message" fullWidth/>
-        </Grid>
-        <Button variant="contained" color="primary">
-          Sent
-        </Button>
+    
       </Container>
     )
 }
