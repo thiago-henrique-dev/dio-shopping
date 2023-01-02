@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container, Paper, Grid, Typography, Button, List, ListItem, ListItemText, makeStyles } from '@material-ui/core/';
+import { Container, Paper, Grid, Typography, Button, List, makeStyles } from '@material-ui/core/';
 import Item from '../components/Item'
+import Card from '../components/Card';
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
@@ -26,85 +27,31 @@ const HomePage = () => {
               </Typography>
               <List>
                 <Item 
-                    itemName="Times Nacionais"
-                    itemDetails="3"
+                    name="Times Nacionais"
+                    details="3"
                 />
                 <Item
-                  itemName="Times Internacionais"
-                  itemDetails="3"
+                  name="Times Internacionais"
+                  details="3"
                 />
                 <Item
-                  itemName="Times Municipais"
-                  itemDetails="3"
+                  name="Times Municipais"
+                  details="3"
                 />
               </List>
             </Paper>
           </Grid>
           <Grid container xs={9} spacing={3} className={classes.root}>
-            <Grid item xs={3}>
-              <Paper className={classes.paper}>
-                <Grid container direction='column'>
-                  <Grid item>
-                    <img width="140px" src="./images/produtos/fla.jpg" alt="Flamengo 2020"/>
-                    <Typography variant='h6'>
-                      Produto
-                    </Typography>
-                    <Typography variant='subtitle1'>
-                      R$ 99.00
-                    </Typography>
-                  </Grid>
-                <Button variant="contained">Adicionar</Button>
-                </Grid>
-              </Paper>
-            </Grid>
-            <Grid item xs={3}>
-              <Paper className={classes.paper}>
-                <Grid container direction='column'>
-                  <Grid item>
-                    <img width="140px" src="./images/produtos/fla.jpg" alt="Flamengo 2020"/>
-                    <Typography variant='h6'>
-                      Produto
-                    </Typography>
-                    <Typography variant='subtitle1'>
-                      R$ 99.00
-                    </Typography>
-                  </Grid>
-                <Button variant="contained">Adicionar</Button>
-                </Grid>
-              </Paper>
-            </Grid>
-            <Grid item xs={3}>
-              <Paper className={classes.paper}>
-                <Grid container direction='column'>
-                  <Grid item>
-                    <img width="140px" src="./images/produtos/fla.jpg" alt="Flamengo 2020"/>
-                    <Typography variant='h6'>
-                      Produto
-                    </Typography>
-                    <Typography variant='subtitle1'>
-                      R$ 99.00
-                    </Typography>
-                  </Grid>
-                <Button variant="contained">Adicionar</Button>
-                </Grid>
-              </Paper>
-            </Grid>
-            <Grid item xs={3}>
-              <Paper className={classes.paper}>
-                <Grid container direction='column'>
-                  <Grid item>
-                    <img width="140px" src="./images/produtos/fla.jpg" alt="Flamengo 2020"/>
-                    <Typography variant='h6'>
-                      Produto
-                    </Typography>
-                    <Typography variant='subtitle1'>
-                      R$ 99.00
-                    </Typography>
-                  </Grid>
-                <Button variant="contained">Adicionar</Button>
-                </Grid>
-              </Paper>
-            </Grid>
+            <Card
+                name="Flamengo 2020" 
+                price="99,99" 
+                image="./images/produtos/fla.jpg"
+            />
+                 <Card
+                name="Arsenal" 
+                price="99,99" 
+                image="./images/produtos/arsenal.jpg"
+            />
           </Grid>
         </Grid>
     
