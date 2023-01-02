@@ -5,14 +5,14 @@ import Contatos from './Pages/Contatos'
 
 const MainRoutes = () => {
     return (
-        <Route>
+        <Routes>
             <Route path="/"
                     element={<HomePage/>}>
             </Route>
             <Route path="/"
                     element={<Contatos/>}>
             </Route>
-        </Route>
+        </Routes>
     )
 }
 
